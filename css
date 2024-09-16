@@ -1,0 +1,576 @@
+/* Global Styles */
+
+/* Apply background color and text color to the entire body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+body, .container {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+/* Remove any potential borders or outlines on the navbar and its elements */
+.app-nav, .app-nav * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important; /* Ensure no box shadows */
+}
+
+/* Ensure no shadows or borders on the navbar */
+.app-nav {
+  box-shadow: none !important; /* Remove box shadow */
+  border: none !important; /* Remove border */
+}
+
+/* Docsify Navbar (default .app-nav) */
+.app-nav {
+  background-color: var(--navbar-background);
+  color: var(--navbar-text-color);
+  padding: 20px 900px 40px 20px; /* padding-top | padding-right | padding-bottom | padding-left */
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%; /* Ensure it spans the entire width */
+  z-index: 9999; /* Ensure it stays on top of other content */
+  box-shadow: none !important; /* Ensure no shadow */
+}
+
+/* Navbar items */
+.app-nav a {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 20px; /* Adjust spacing between items */
+}
+
+.app-nav a:hover {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+/* Navbar items */
+.app-nav a {
+  color: var(--navbar-text-color);
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 20px; /* Adjust spacing between items */
+}
+
+.app-nav a:hover {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+/* Navbar stays within view on smaller screens */
+@media (max-width: 768px) {
+  .app-nav {
+    justify-content: center; /* Center the items on small screens */
+  }
+}
+
+
+:root {
+  /* Global layout settings */
+  --sidebar-width: 740px !important;  /* Default width for the sidebar globally */
+}
+
+/* Sidebar container styling */
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-background);
+  color: var(--sidebar-text-color);
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* Set the global font family */
+  font-size: 18px; /* Global font size for sidebar */
+  line-height: 1.6; /* Optional: Adjust line height for better readability */
+  overflow-wrap: break-word; /* Break long words */
+  word-wrap: break-word; /* Older property for text wrapping */
+  word-break: break-word; /* Ensures long words break to fit */
+  box-shadow: none !important; /* Remove shadow effects */
+  border: none !important; /* Remove border */
+}
+
+/* Remove list-style from sidebar ul */
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /* Remove bullet points */
+}
+
+/* Styling for sidebar list items */
+.sidebar li {
+  overflow-wrap: break-word; /* Break long words */
+  word-wrap: break-word; /* Older property for text wrapping */
+  word-break: break-word; /* Ensures long words break to fit */
+}
+
+/* Sidebar links styling */
+.sidebar a {
+  display: block; /* Ensure links take up full width for wrapping */
+  color: var(--sidebar-text-color);
+  text-decoration: none;
+  font-family: inherit; /* Inherit the global font family */
+  font-size: inherit; /* Inherit the global font size */
+  overflow-wrap: break-word; /* Break long words */
+  word-wrap: break-word; /* Older property for text wrapping */
+  word-break: break-word; /* Ensures long words break to fit */
+  padding: 8px 0; /* Adjust padding for better spacing */
+}
+
+/* Sidebar links hover effect */
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar strong text (for bold items) */
+.sidebar strong {
+  font-weight: bold;
+}
+
+
+
+
+/* Style for the markdown-section to ensure it fits within the content */
+.markdown-section#main {
+  width: 1000px; /* Fixed width for the markdown section */
+  max-width: 100%; /* Ensures it doesn't exceed its container width */
+  padding: 20px; /* Padding inside the markdown section */
+  box-sizing: border-box; /* Includes padding and border in the total width and height */
+  margin-left: 90px; /* Move the markdown section to the right */
+}
+
+/* Flex container for centering content */
+.content {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: flex-start; /* Aligns content to the top */
+}
+
+/* Container for managing the content width and alignment */
+.content-container {
+  width: 100%; /* Full width of the parent container */
+  max-width: var(--content-max-width); /* Maximum width controlled by a CSS variable */
+  padding: 20px; /* Padding inside the container */
+  box-sizing: border-box; /* Includes padding and border in the total width and height */
+}
+
+/* Adjust the content alignment to the left */
+.content-container.left-aligned {
+  margin-left: 200px; /* Adjust to move container closer to the sidebar */
+  margin-right: auto; /* Ensure right margin is auto for proper alignment */
+}
+
+/* Ensure headers and strong tags inside the markdown content use the correct color */
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, 
+.content strong {
+  color: var(--header-color); /* Applies the header color from CSS variables */
+}
+
+/* Ensure proper spacing for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0; /* Remove margin for small screens */
+    padding: 10px; /* Adjust padding for small screens */
+  }
+}
+
+
+
+/* Remove borders/lines under the navbar for all themes */
+.app-nav {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Theme: Light */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --link-color: #007bff;
+  --sidebar-background: #f4f4f4;
+  --sidebar-text-color: #333333;
+  --header-color: #333333;
+  --navbar-background: #ffffff;
+  --navbar-text-color: #000000;
+  --sidebar-width: 350px; /* Adjust sidebar width globally */
+}
+
+/* Sidebar strong text in light theme */
+:root .sidebar strong {
+  color: #333333; /* Ensure readability for light theme */
+}
+
+/* Theme: Dark */
+[data-theme="dark"] {
+  --background-color: #222222;
+  --text-color: #ffffff;
+  --link-color: #007bff;
+  --sidebar-background: #333333;
+  --sidebar-text-color: #ffffff;
+  --header-color: #f0f0f0;
+  --navbar-background: #222222;
+  --navbar-text-color: #ffffff;
+  --sidebar-width: 350px; /* Adjust sidebar width for dark theme */
+}
+
+/* Strong text color within the markdown section in dark theme */
+[data-theme="dark"] .markdown-section#main strong {
+  color: #00bfff; /* Bright blue color for strong text inside markdown content */
+}
+
+/* Sidebar strong text in dark theme */
+[data-theme="dark"] .sidebar strong {
+  color: #f0f0f0; /* Ensure readability for dark theme */
+}
+
+/* Theme: Terminal Green */
+[data-theme="terminalgreen"] {
+  --background-color: #000000;
+  --text-color: #00ff00;
+  --link-color: #00ff00;
+  --sidebar-background: #001900;
+  --sidebar-text-color: #00ff00;
+  --header-color: #00ff00;
+  --navbar-background: #000000;
+  --navbar-text-color: #00ff00;
+  --sidebar-width: 350px; /* Adjust sidebar width for terminal green */
+}
+
+/* Terminal Green theme header and bold text */
+[data-theme="terminalgreen"] h1, 
+[data-theme="terminalgreen"] h2, 
+[data-theme="terminalgreen"] h3, 
+[data-theme="terminalgreen"] h4, 
+[data-theme="terminalgreen"] h5, 
+[data-theme="terminalgreen"] h6 {
+  color: #00ff00; /* Bright green for readability */
+}
+
+/* Strong text color within the markdown section */
+[data-theme="terminalgreen"] .markdown-section#main strong {
+  color: #ffffff; /* White color for strong text inside markdown content */
+}
+
+/* Sidebar strong text in terminal green theme */
+[data-theme="terminalgreen"] .sidebar strong {
+  color: #00ff00; /* Ensure readability for terminal green theme */
+}
+
+/* Theme: Ocean Blue */
+[data-theme="oceanblue"] {
+  --background-color: #001f3f;
+  --text-color: #ffffff;
+  --link-color: #00aaff;
+  --sidebar-background: #003366;
+  --sidebar-text-color: #ffffff;
+  --header-color: #00aaff;
+  --navbar-background: #001f3f; /* Navbar background matches the theme */
+  --navbar-text-color: #00aaff;  /* Navbar text color */
+  --sidebar-width: 350px; /* Adjust sidebar width for ocean blue */
+}
+
+/* Ocean Blue theme header and bold text */
+[data-theme="oceanblue"] h1, 
+[data-theme="oceanblue"] h2, 
+[data-theme="oceanblue"] h3, 
+[data-theme="oceanblue"] h4, 
+[data-theme="oceanblue"] h5, 
+[data-theme="oceanblue"] h6, 
+[data-theme="oceanblue"] strong {
+  color: #00aaff; /* Bright blue for readability */
+}
+
+/* Sidebar strong text in ocean blue theme */
+[data-theme="oceanblue"] .sidebar strong {
+  color: #00aaff !important; /* Ensure readability for sidebar strong */
+  font-weight: bold;
+}
+
+/* Theme: Space Red */
+[data-theme="spacered"] {
+  --background-color: #612a2a;   /* Deep dark space-like background */
+  --text-color: #f5f5f5;         /* Bright white text for contrast */
+  --link-color: #ff4500;         /* Vibrant space-red links */
+  --sidebar-background: #4a4242; /* Dark red for sidebar background */
+  --sidebar-text-color: #f5f5f5; /* Light text for readability */
+  --header-color: #ff6347;       /* Bright red for headers */
+  --navbar-background: #612a2a;  /* Dark background for the navbar */
+  --navbar-text-color: #ff4500;  /* Red for navbar text */
+  --sidebar-strong-color: #ff6666; /* Bold text color in sidebar */
+  --sidebar-width: 400px; /* Adjust sidebar width for space red */
+}
+
+/* Space Red theme header and bold text */
+[data-theme="spacered"] h1, 
+[data-theme="spacered"] h2, 
+[data-theme="spacered"] h3, 
+[data-theme="spacered"] h4, 
+[data-theme="spacered"] h5, 
+[data-theme="spacered"] h6, 
+[data-theme="spacered"] strong {
+  color: var(--header-color); /* Bright red for headers */
+}
+
+/* Sidebar strong text in space red theme */
+[data-theme="spacered"] .sidebar strong {
+  color: var(--sidebar-strong-color) !important; /* Ensure strong in sidebar gets the right color */
+  font-weight: bold;
+}
+
+/* Hover effect for sidebar links in space red theme */
+[data-theme="spacered"] .sidebar a:hover {
+  color: #ff9999; /* Lighter red for hover effect */
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Active link in space red theme */
+[data-theme="spacered"] .sidebar a.active,
+[data-theme="spacered"] .sidebar li.active > a {
+  color: #8d2323 !important; /* Bright red for active link */
+  font-weight: bold !important; /* Make the active link bold */
+  text-decoration: none !important; /* Remove underline for active link */
+}
+
+/* General sidebar link styling */
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  padding-left: 15px; /* Space before text */
+  text-decoration: none;
+}
+
+
+/* General Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders don't double up */
+  margin: 20px 0;
+}
+
+/* Table Header and Data Cells */
+th, td {
+  padding: 12px 15px;
+  border: 1px solid var(--text-color); /* Borders around cells */
+}
+
+/* Zebra striping for odd rows */
+tr:nth-child(odd) td {
+  background-color: rgba(255, 255, 255, 0.1); /* Default light background for odd rows */
+}
+
+/* Zebra striping for even rows */
+tr:nth-child(even) td {
+  background-color: rgba(255, 255, 255, 0.2); /* Default slightly darker background for even rows */
+}
+
+/* General header styling */
+th {
+  background-color: var(--header-color); /* Set header background to the theme's header color */
+  color: var(--text-color); /* Header text color */
+  font-weight: bold;
+  text-align: left;
+}
+
+
+/* Light Theme Specific Table Styles */
+[data-theme="light"] table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+[data-theme="light"] th, [data-theme="light"] td {
+  padding: 12px 15px;
+  border: 0px solid #cccccc; /* Light gray border for the Light theme */
+}
+
+[data-theme="light"] th {
+  background-color: #a4a4a4; /* Light gray background for headers */
+  color: #000000; /* Black text for headers */
+  font-weight: bold;
+  text-align: left;
+}
+
+[data-theme="light"] tr:nth-child(odd) td {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+[data-theme="light"] tr:nth-child(even) td {
+  background-color: #c8c8c8; /* Light gray background for even rows */
+}
+
+[data-theme="light"] td, [data-theme="light"] th {
+  border-right: 0px solid #cccccc; /* Light gray right border */
+}
+
+[data-theme="light"] td:last-child, [data-theme="light"] th:last-child {
+  border-right: none; /* Remove right border from the last column */
+}
+/* Zebra striping and colors for Terminal Green theme */
+[data-theme="terminalgreen"] tr:nth-child(odd) td {
+  background-color: #004d00; /* Dark green for odd rows */
+}
+
+[data-theme="terminalgreen"] tr:nth-child(even) td {
+  background-color: #003300; /* Slightly darker green for even rows */
+}
+
+/* Zebra striping and colors for Dark theme */
+[data-theme="dark"] tr:nth-child(odd) td {
+  background-color: #333333; /* Dark gray for odd rows */
+}
+
+[data-theme="dark"] tr:nth-child(even) td {
+  background-color: #444444; /* Slightly lighter gray for even rows */
+}
+
+/* Zebra striping and colors for Ocean Blue theme */
+[data-theme="oceanblue"] tr:nth-child(odd) td {
+  background-color: #002244; /* Dark blue for odd rows */
+}
+
+[data-theme="oceanblue"] tr:nth-child(even) td {
+  background-color: #003366; /* Slightly lighter blue for even rows */
+}
+
+/* Zebra striping and colors for Space Red theme */
+[data-theme="spacered"] tr:nth-child(odd) td {
+  background-color: #4a1e1e; /* Dark red for odd rows */
+}
+
+[data-theme="spacered"] tr:nth-child(even) td {
+  background-color: #5c2a2a; /* Slightly lighter red for even rows */
+}
+
+
+/* Default blockquote styling */
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+  margin: 16px 0;
+  font-style: italic;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* Dark theme blockquote styling */
+[data-theme="dark"] blockquote {
+  border-left: 4px solid #555;
+  background-color: #333;
+  color: #ddd;
+}
+
+/* Terminal Green theme blockquote styling */
+[data-theme="terminalgreen"] blockquote {
+  border-left: 4px solid #00ff00;
+  background-color: #768e76;
+  color: #00ff00;
+}
+
+/* Ocean Blue theme blockquote styling */
+[data-theme="oceanblue"] blockquote {
+  border-left: 4px solid #005f73;
+  background-color: #e0f7fa;
+  color: #004d40;
+}
+
+/* Space Red theme blockquote styling */
+[data-theme="spacered"] blockquote {
+  border-left: 4px solid #ff4500; /* Vibrant space-red border */
+  background-color: #585b46;      /* Deep dark space-like background */
+  color: #f5f5f5;                 /* Bright white text for contrast */
+}
+
+/* Light theme blockquote styling (example) */
+[data-theme="light"] blockquote {
+  border-left: 4px solid #ccc;
+  background-color: #fafafa;
+  color: #333;
+}
+
+
+
+
+
+
+/* Top-level icons for non-expandable links */
+.sidebar > ul > li:not(.app-sub-sidebar) > a:before {
+  content: "\f197"; /* Font Awesome spaceship for top-level */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 8px;
+  font-size: 16px; /* Adjust icon size as needed */
+  color: var(--link-color); /* Icon matches link color */
+}
+
+/* Icons for expandable top-level links (with sub-levels) */
+.sidebar > ul > li.app-sub-sidebar > a:before {
+  content: "\f105"; /* Right-arrow for expandable top-level links */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 16px; /* Adjust icon size as needed */
+  color: var(--link-color);
+  transform: rotate(0deg); /* Collapsed by default */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Expanded top-level icons (arrow-down) */
+.sidebar li.open.app-sub-sidebar > a:before {
+  content: "\f107"; /* Down-arrow for expanded items */
+  transform: rotate(180deg); /* Rotate 180 degrees to indicate expanded state */
+}
+
+/* Sub-level links */
+.sidebar .app-sub-sidebar li a:before {
+  content: "\f5a2"; /* Planet icon for sub-levels */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 8px;
+  font-size: 14px; /* Slightly smaller icon for sub-levels */
+  color: var(--link-color);
+  padding-left: 20px; /* Indent sub-level items more */
+}
+
+/* Hover effect for sidebar links */
+.sidebar a:hover {
+  color: var(--sidebar-text-color); /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Active link styling for top-level and sub-level */
+.sidebar li.active > a, .sidebar .app-sub-sidebar li.active > a {
+  color: var(--sidebar-text-color); /* Color for active links */
+  font-weight: bold; /* Bold text for active links */
+  text-decoration: none; /* Remove underline for active links */
+}
+
+/* Sidebar padding adjustments */
+.sidebar {
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Ensure top-level items are aligned correctly */
+.sidebar ul {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove default padding */
+}
+
+/* Ensure the icons for expandable items are not duplicated */
+.sidebar > ul > li.app-sub-sidebar > a:before {
+  content: "\f105"; /* Right-arrow for expandable top-level links */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 16px; /* Consistent icon size */
+  color: var(--link-color);
+}
